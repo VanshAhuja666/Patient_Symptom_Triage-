@@ -79,7 +79,6 @@ def evaluate_triage(data):
     score = 0
     urgent_flag = False
 
-    # Risk based on symptom groups
     score = score + count_matches(symptoms, triage_rules.CARDIAC_SYMPTOMS) * 2
     score = score + count_matches(symptoms, triage_rules.RESPIRATORY_SYMPTOMS) * 2
     score = score + count_matches(symptoms, triage_rules.NEUROLOGICAL_SYMPTOMS) * 3
@@ -87,27 +86,23 @@ def evaluate_triage(data):
     infection_count = count_matches(symptoms, triage_rules.INFECTION_SYMPTOMS)
     score = score + infection_count
 
-    # BP rules
     if bp_sys > 180 or bp_dia > 110:
         urgent_flag = True
         score = score + 4
     elif bp_sys > 160 or bp_dia > 100:
         score = score + 2
 
-    # SpO2 rules
     if spo2 < 90:
         urgent_flag = True
         score = score + 4
     elif spo2 < 94:
         score = score + 2
 
-    # Age and duration
     if age >= 65:
         score = score + 2
     if duration > 3:
         score = score + 1
 
-    # Decide category
     if urgent_flag or score >= 9:
         category = "URGENT"
     elif score >= 5:
@@ -115,7 +110,6 @@ def evaluate_triage(data):
     else:
         category = "MILD"
 
-    # Build messages
     if category == "URGENT":
         if main_system == "cardiac":
             result = "URGENT - Possible cardiac emergency."
