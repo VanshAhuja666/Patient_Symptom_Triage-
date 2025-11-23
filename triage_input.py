@@ -2,7 +2,6 @@
 # This module takes input from the user and returns a dictionary.
 
 def get_integer_input(message):
-    # Helper to safely read an integer
     while True:
         text = input(message)
         if text.isdigit():
@@ -20,13 +19,10 @@ def get_patient_info():
     print("Enter symptoms separated by comma (,):")
     symptoms_input = input("Symptoms: ")
 
-    # convert to lower case for easy matching
     symptoms_input = symptoms_input.lower()
 
-    # split into list by comma
     raw_list = symptoms_input.split(",")
 
-    # clean spaces around each symptom
     symptoms = []
     i = 0
     while i < len(raw_list):
@@ -42,7 +38,6 @@ def get_patient_info():
     bp_dia = get_integer_input("BP Diastolic: ")
     spo2 = get_integer_input("Oxygen Saturation (%): ")
 
-    # put everything into a dictionary
     data = {}
     data["name"] = name
     data["age"] = age
