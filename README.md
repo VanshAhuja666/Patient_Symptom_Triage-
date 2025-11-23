@@ -35,6 +35,22 @@ or external libraries.
 3. Open terminal or command prompt.
 4. Navigate to the project folder.
 5. Run the program using: python main.py
+6. Or Open Jupyter Notebook on your system.
+7. Go to the folder where you have downloaded or cloned this project.
+8. Make sure all these files are in the same folder:
+      main.py,
+      triage_input.py,
+      triage_engine.py,
+      triage_rules.py,
+      triage_advice.py,
+      Main_PythonFile.ipynb
+9. Open the File :- Main_PythonFile.ipynb
+10. And You Can Directly Run the Pre-Written First Cell inside Main_PythonFile.ipynb Or
+11. In a new cell, write this code :- %run main.py
+12. Press Shift + Enter to run the cell.
+13. The program will start running inside the notebook, and you can enter patient details as Adressed Below.
+14. Important Note :-
+Make sure all .py files and the .ipynb file are inside the same directory, otherwise Python will not be able to import the modules.
 
 ## How to Use
 
