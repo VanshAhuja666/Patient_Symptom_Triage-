@@ -48,7 +48,7 @@ def get_advice(category, main_system):
                 "- Plan a doctor visit if there is no improvement.\n"
             )
 
-    else:  # MILD
+    else:  
         return (
             "Advice:\n"
             "- Take rest and drink enough water.\n"
