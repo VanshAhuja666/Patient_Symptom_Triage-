@@ -5,7 +5,6 @@ from triage_input import get_patient_info
 from triage_engine import evaluate_triage
 from triage_advice import get_advice
 
-# statistics counters (in memory only)
 total_patients = 0
 urgent_count = 0
 moderate_count = 0
@@ -28,7 +27,6 @@ def run_new_triage():
     advice = get_advice(category, main_system)
     print("\n" + advice)
 
-    # update in-memory statistics
     total_patients = total_patients + 1
     if category == "URGENT":
         urgent_count = urgent_count + 1
