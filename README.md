@@ -1,7 +1,9 @@
-# Patient_Symptom_Triage-
+# Patient_Symptom_Triage
+
 This is a structured console-based Python project using modular design principles that takes patient symptoms and vital signs, applies simple rule-based logic to identify the affected body system, and classifies the case as urgent, moderate, or mild. Designed for health informatics learning using only core Python concepts.
 
 # Patient Symptom Triage System
+
 ## Overview
 This is a console-based Python project that accepts basic patient details like symptoms 
 and vital signs and classifies the condition as Urgent, Moderate, or Mild using 
